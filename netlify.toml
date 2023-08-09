@@ -1,7 +1,8 @@
 [build]
     command = "npm run build"
-    publish = "build"
+    publish = "build/"
     functions = "netlify/functions"
+
 [functions]
     external_node_modules = ["mongodb"]
     directory = "netlify/functions"

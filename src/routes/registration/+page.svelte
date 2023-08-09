@@ -9,7 +9,7 @@
         getCategories,
         getRegistrations,
         updateRegistration
-    } from "../../lib/registration_api";
+    } from "$lib/registration_api";
 //    import {RingLoader} from "svelte-loading-spinners";
 
     let formVisible = false;
@@ -18,7 +18,8 @@
 
     onMount(async () => {
         $registrations = await getRegistrations();
-        $categories = await getCategories();
+        let cats: [{_id: string, description: string}] = await getCategories();
+        $categories = cats.map(c => c.description);
     });
 
 

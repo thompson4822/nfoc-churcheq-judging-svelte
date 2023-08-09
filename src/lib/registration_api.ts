@@ -1,4 +1,5 @@
 import type {Registration} from "../models/Registration";
+import type {EntryScore} from "../models/EntryScore";
 //import type {EntryModel} from "../models/EntryModel";
 
 // Read/GET
@@ -45,18 +46,16 @@ export const deleteRegistration = async (contestant: Registration) => {
         .then(data => data);
 }
 
-/*
-export const retrieveEntries = async () => {
-    return await fetch("/.netlify/functions/retrieve_entries")
+export const getEntryScores = async (category: string) => {
+    return await fetch(`/.netlify/functions/get_entryScores?category=${category}`)
         .then(response => response.json())
         .then(data => data);
 }
 
-export const saveEntries = async (entries: EntryModel[]) => {
-    return await fetch("/.netlify/functions/save_entries", {
+export const saveEntryScores = async (entryScores: EntryScore[]) => {
+    return await fetch("/.netlify/functions/save_entryScores", {
         method: "POST",
-        body: JSON.stringify(entries)
+        body: JSON.stringify(entryScores)
     })
 }
-*/
 
