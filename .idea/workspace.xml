@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ce765eb-9bc2-4688-a8e9-24bfd8f534c3" name="Changes" comment="Results and judging completed">
+    <list default="true" id="5ce765eb-9bc2-4688-a8e9-24bfd8f534c3" name="Changes" comment="Cleanup">
+      <change afterPath="$PROJECT_DIR$/src/routes/reset/db/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegisterEntry.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegisterEntry.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/registration_api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/registration_api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
       <workItem from="1691082790714" duration="9744000" />
       <workItem from="1691428438165" duration="4303000" />
       <workItem from="1691519817259" duration="632000" />
-      <workItem from="1691593898198" duration="16696000" />
+      <workItem from="1691593898198" duration="19857000" />
     </task>
     <task id="LOCAL-00001" summary="Registration fleshed out and rudimentary judging in place">
       <option name="closed" value="true" />
@@ -92,7 +94,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691871462829</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Cleanup">
+      <option name="closed" value="true" />
+      <created>1691872224572</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691872224572</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +111,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration fleshed out and rudimentary judging in place" />
     <MESSAGE value="Results and judging completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Results and judging completed" />
+    <MESSAGE value="Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
   </component>
 </project>

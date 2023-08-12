@@ -5,7 +5,7 @@
 </script>
 
 <section class="p-4 entry-description">
-    <h3>#{contestant.entryNumber} - {contestant.description}</h3>
+    <h3>#{contestant.entryNumber} - {contestant.description} ({contestant.category})</h3>
 </section>
 
 <style>

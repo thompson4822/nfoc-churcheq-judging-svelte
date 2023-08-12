@@ -59,3 +59,14 @@ export const saveEntryScores = async (entryScores: EntryScore[]) => {
     })
 }
 
+export const deleteRegistrations = async () => {
+    return await fetch("/.netlify/functions/delete_registrations", {
+        method: "POST",
+    })
+}
+
+export const deleteEntryScores = async () => {
+    return await fetch("/.netlify/functions/delete_entryScores", {
+        method: "POST",
+    })
+}
