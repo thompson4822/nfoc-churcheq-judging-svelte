@@ -72,9 +72,9 @@
 
 </script>
 
-<h2 class="text-center">Registration</h2>
+<h2 class="h1 text-center">Registration</h2>
 {#if formVisible===false}
-    <button class="btn variant-filled" on:click={addNewContestantForm}>Register</button>
+    <button class="btn variant-filled ml-6" on:click={addNewContestantForm}>Register</button>
 {:else}
     <div class="card">
         <section class="p-4">
