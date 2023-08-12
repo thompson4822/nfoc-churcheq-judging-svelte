@@ -45,15 +45,25 @@
 		<h1 class="h1 mb-4">NFOC Church-EQ Judging</h1>
 		<div class="mb-3">
 			<h2 class="h2">Meats</h2>
+			<ol class="list-decimal">
 				{#each [...orderedMap(meatMap).keys()] as description}
-					<div class="my-1 ml-5">{description}, score = {meatMap.get(description)}</div>
+					<li>{description}, score = {meatMap.get(description)}</li>
 				{/each}
+			</ol>
 		</div>
 		<div class="mb-3">
 			<h2 class="h2">Desserts</h2>
+			<ol class="list-decimal">
 				{#each [...dessertMap.keys()] as description}
-					<div class="my-1 ml-5">{description}, score = {dessertMap.get(description)}</div>
+					<li>{description}, score = {dessertMap.get(description)}</li>
 				{/each}
+			</ol>
 		</div>
 	</div>
 </div>
+
+<style>
+	ol {
+		padding: 5px 0 0px 40px;
+	}
+</style>
