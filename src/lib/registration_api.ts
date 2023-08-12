@@ -46,8 +46,8 @@ export const deleteRegistration = async (contestant: Registration) => {
         .then(data => data);
 }
 
-export const getEntryScores = async (category: string) => {
-    return await fetch(`/.netlify/functions/get_entryScores?category=${category}`)
+export const getEntryScores = async (): Promise<EntryScore[]> => {
+    return await fetch(`/.netlify/functions/get_entryScores`)
         .then(response => response.json())
         .then(data => data);
 }

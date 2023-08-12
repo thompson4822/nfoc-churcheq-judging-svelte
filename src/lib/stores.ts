@@ -9,8 +9,8 @@ export const registrations: Writable<Registration[]> = writable([]);
 
 export const categories: Writable<string[]> = writable([]);
 
-export const entryScores: Writable<EntryScore[]> = writable([]);
-
+// export const entryScores: Writable<EntryScore[]> = writable([]);
+//
 /*
 export const populateEntries = (contestantRegistrations: Registration[]) => {
     const result: EntryScore[] = [];

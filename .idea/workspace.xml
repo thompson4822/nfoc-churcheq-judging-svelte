@@ -5,25 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ce765eb-9bc2-4688-a8e9-24bfd8f534c3" name="Changes" comment="Registration fleshed out and rudimentary judging in place">
-      <change afterPath="$PROJECT_DIR$/netlify/functions/get_entryScores/get_entryScores.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netlify/functions/save_entryScores/save_entryScores.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/judging/[category]/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/dnd/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify.toml" beforeDir="false" afterPath="$PROJECT_DIR$/netlify.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify/functions/create_registration/create_registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/netlify/functions/create_registration/create_registration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify/functions/delete_registration/delete_registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/netlify/functions/delete_registration/delete_registration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify/functions/get_categories/get_categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/netlify/functions/get_categories/get_categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify/functions/get_registrations/get_registrations.js" beforeDir="false" afterPath="$PROJECT_DIR$/netlify/functions/get_registrations/get_registrations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify/functions/update_registration/update_registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/netlify/functions/update_registration/update_registration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netlify/functions/get_entryScores/get_entryScores.js" beforeDir="false" afterPath="$PROJECT_DIR$/netlify/functions/get_entryScores/get_entryScores.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netlify/functions/save_entryScores/save_entryScores.js" beforeDir="false" afterPath="$PROJECT_DIR$/netlify/functions/save_entryScores/save_entryScores.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/registration_api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/registration_api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/stores.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/stores.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/EntryScore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/EntryScore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/registration/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/registration/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/judging/[category]/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/judging/[category]/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="+page" />
       </list>
     </option>
   </component>
@@ -90,8 +82,17 @@
       <workItem from="1691082790714" duration="9744000" />
       <workItem from="1691428438165" duration="4303000" />
       <workItem from="1691519817259" duration="632000" />
-      <workItem from="1691593898198" duration="3041000" />
+      <workItem from="1691593898198" duration="15790000" />
     </task>
+    <task id="LOCAL-00001" summary="Registration fleshed out and rudimentary judging in place">
+      <option name="closed" value="true" />
+      <created>1691597898118</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691597898118</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
