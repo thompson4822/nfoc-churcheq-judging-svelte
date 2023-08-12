@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ce765eb-9bc2-4688-a8e9-24bfd8f534c3" name="Changes" comment="Registration fleshed out and rudimentary judging in place">
-      <change afterPath="$PROJECT_DIR$/src/routes/dnd/+page.svelte" afterDir="false" />
+    <list default="true" id="5ce765eb-9bc2-4688-a8e9-24bfd8f534c3" name="Changes" comment="Results and judging completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify/functions/get_entryScores/get_entryScores.js" beforeDir="false" afterPath="$PROJECT_DIR$/netlify/functions/get_entryScores/get_entryScores.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify/functions/save_entryScores/save_entryScores.js" beforeDir="false" afterPath="$PROJECT_DIR$/netlify/functions/save_entryScores/save_entryScores.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/registration_api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/registration_api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/stores.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/stores.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/judging/[category]/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/judging/[category]/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +74,7 @@
       <workItem from="1691082790714" duration="9744000" />
       <workItem from="1691428438165" duration="4303000" />
       <workItem from="1691519817259" duration="632000" />
-      <workItem from="1691593898198" duration="15790000" />
+      <workItem from="1691593898198" duration="16696000" />
     </task>
     <task id="LOCAL-00001" summary="Registration fleshed out and rudimentary judging in place">
       <option name="closed" value="true" />
@@ -92,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691597898118</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Results and judging completed">
+      <option name="closed" value="true" />
+      <created>1691871462829</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691871462829</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration fleshed out and rudimentary judging in place" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration fleshed out and rudimentary judging in place" />
+    <MESSAGE value="Results and judging completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Results and judging completed" />
   </component>
 </project>

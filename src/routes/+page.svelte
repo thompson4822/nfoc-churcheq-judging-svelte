@@ -46,13 +46,13 @@
 		<div class="mb-3">
 			<h2 class="h2">Meats</h2>
 				{#each [...orderedMap(meatMap).keys()] as description}
-					<div class="my-1 ml-5">{description}, score={meatMap.get(description)}</div>
+					<div class="my-1 ml-5">{description}, score = {meatMap.get(description)}</div>
 				{/each}
 		</div>
 		<div class="mb-3">
 			<h2 class="h2">Desserts</h2>
 				{#each [...dessertMap.keys()] as description}
-					<span>{description}, score={dessertMap.get(description)}</span>
+					<div class="my-1 ml-5">{description}, score = {dessertMap.get(description)}</div>
 				{/each}
 		</div>
 	</div>
