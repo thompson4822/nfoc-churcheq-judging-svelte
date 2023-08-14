@@ -54,7 +54,7 @@
 		<div class="mb-3">
 			<h2 class="h2">Desserts</h2>
 			<ol class="list-decimal">
-				{#each [...dessertMap.keys()] as description}
+				{#each [...orderedMap(dessertMap).keys()] as description}
 					<li>{description}, score = {dessertMap.get(description)}</li>
 				{/each}
 			</ol>
