@@ -1,5 +1,6 @@
 import type {Registration} from "../models/Registration";
 import type {EntryScore} from "../models/EntryScore";
+import type {Category} from "../models/Category";
 //import type {EntryModel} from "../models/EntryModel";
 
 // Read/GET
@@ -10,7 +11,7 @@ export const getRegistrations = async () => {
 }
 
 // Read/GET
-export const getCategories = async () => {
+export const getCategories = async (): Promise<Category[]> => {
     return await fetch("/.netlify/functions/get_categories")
         .then(response => response.json())
         .then(data => data);

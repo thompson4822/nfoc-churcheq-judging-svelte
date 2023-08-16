@@ -1,40 +1,55 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import {onMount} from 'svelte';
 	import {getEntryScores, getRegistrations} from "$lib/registration_api";
 	import {registrations} from "$lib/stores";
 	import type {EntryScore} from "../models/EntryScore";
 
-	let dessertMap = new Map();
-	let meatMap = new Map();
+	let mapOfMaps = new Map();
 
-	// Entry #1 'Braized Beef' by Steve Thompson
 	const createDescription = (entryScore: EntryScore) => {
 		let name = $registrations.filter(registration => registration.entryNumber === entryScore.entryNumber)[0].name;
 		return `${name}'s '${entryScore.description}'`;
 	}
 
+	// Given an entry with an entry number, description and score, add its score to the final scores
 	const addToMap = (entryScore: EntryScore) => {
 		let description = createDescription(entryScore);
-		let map = entryScore.category === 'Dessert' ? dessertMap : meatMap;
-		let score = (map.has(description)) ? map.get(description) + entryScore.score : entryScore.score;
-		map.set(description, score);
+		let category = entryScore.category;
+		let map = mapOfMaps.get(category);
+		// When the category exists, a map for that category must also exist with which we'll work
+		if (map) {
+			let currentScore = map.get(description);
+			// When the entry's description exists, update its score
+			if (currentScore) {
+				map.set(description, currentScore + entryScore.score)
+			}
+			// Otherwise, add the entry description and score to the map
+			else {
+				map.set(description, entryScore.score)
+			}
+		}
+		// When no map exists for the category, add it, and create its sub-map with the description and entry score
+		else {
+			mapOfMaps.set(category, new Map([[description, entryScore.score]]))
+		}
 	}
 
 	onMount(async () => {
 		$registrations = await getRegistrations();
 		let entryScores: EntryScore[] = await getEntryScores();
+
+		mapOfMaps = new Map();
 		entryScores.forEach((entryScore) => {
 			addToMap(entryScore);
 		});
-		meatMap = meatMap;
-		dessertMap = dessertMap;
 
+		mapOfMaps = mapOfMaps
 	});
 
-	const orderedMap = (map: Map<string, number>) => {
-		let ordered = new Map([...map.entries()].sort((a, b) => b[1] - a[1]));
-		return ordered;
+	// Sort all entries in a category in descending order based on overall score
+	const orderedMap = (categoryMap) => {
+		return new Map([...categoryMap.entries()].sort((a, b) => b[1] - a[1]));
 	}
 
 </script>
@@ -43,22 +58,16 @@
 <div class="container h-full mx-auto flex justify-center m-4">
 	<div class="">
 		<h1 class="h1 mb-4">NFOC Church-EQ Judging</h1>
-		<div class="mb-3">
-			<h2 class="h2">Meats</h2>
-			<ol class="list-decimal">
-				{#each [...orderedMap(meatMap).keys()] as description}
-					<li>{description}, score = {meatMap.get(description)}</li>
-				{/each}
-			</ol>
-		</div>
-		<div class="mb-3">
-			<h2 class="h2">Desserts</h2>
-			<ol class="list-decimal">
-				{#each [...orderedMap(dessertMap).keys()] as description}
-					<li>{description}, score = {dessertMap.get(description)}</li>
-				{/each}
-			</ol>
-		</div>
+		{#each [...mapOfMaps.keys()] as category }
+			<div class="mb-3">
+					<h2 class="h2">{category}s</h2>
+					<ol class="list-decimal">
+						{#each [...orderedMap(mapOfMaps.get(category)).keys()] as description}
+							<li>{description}, score = {mapOfMaps.get(category).get(description)}</li>
+						{/each}
+					</ol>
+			</div>
+		{/each}
 	</div>
 </div>
 
