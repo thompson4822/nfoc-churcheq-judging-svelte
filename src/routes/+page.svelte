@@ -2,7 +2,7 @@
 <script lang="ts">
 	import {onMount} from 'svelte';
 	import {getEntryScores, getRegistrations} from "$lib/registration_api";
-	import {registrations} from "$lib/stores";
+	import {registrations, userId} from "$lib/stores";
 	import type {EntryScore} from "../models/EntryScore";
 
 	let mapOfMaps = new Map();
@@ -51,6 +51,10 @@
 	const orderedMap = (categoryMap) => {
 		return new Map([...categoryMap.entries()].sort((a, b) => b[1] - a[1]));
 	}
+
+	$: console.log(userId)
+
+
 
 </script>
 

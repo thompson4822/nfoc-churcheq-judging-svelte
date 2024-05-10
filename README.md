@@ -25,6 +25,10 @@ npm run dev
 npm run dev -- --open
 ```
 
+The above instructions are good, but what you really should do is run the application via netlify as you develop locally. If you do not do this, none of the netlify functions on which the app depends can be invoked. Thankfully, to run locally all you need to do is:
+1) Make sure that your `build` directory has been deleted.
+2) Issue `netlify dev`
+
 ## Building
 
 To create a production version of your app:

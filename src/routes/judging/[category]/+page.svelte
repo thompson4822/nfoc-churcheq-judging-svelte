@@ -7,6 +7,7 @@
     import {dndzone} from "svelte-dnd-action";
     import type {EntryScore} from "../../../models/EntryScore";
     import {goto} from "$app/navigation";
+	import { userId } from "$lib/stores";
 
     let items: { id: number, entryScore: EntryScore }[]  = []
 
@@ -44,6 +45,10 @@
             return { id, entryScore: entryScores[id] }
         })
     });
+
+    $: console.log(userId)
+
+
 
 
 </script>
