@@ -71,3 +71,13 @@ export const deleteEntryScores = async () => {
         method: "POST",
     })
 }
+
+export const deleteEntryScoresForUser = async (userId: string) => {
+    return await fetch("/.netlify/functions/delete_entryScores_for_user", {
+        method: "DELETE",
+        body: JSON.stringify(userId)
+    })
+        .then(response => response.json())
+        .then(data => data);
+
+}
