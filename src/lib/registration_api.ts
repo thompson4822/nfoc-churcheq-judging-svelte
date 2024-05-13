@@ -81,3 +81,23 @@ export const deleteEntryScoresForUser = async (userId: string) => {
         .then(data => data);
 
 }
+
+export const addCategory = async (category: Category): Promise<void> => {
+    await fetch("/.netlify/functions/add_category", {
+        method: "POST",
+        body: JSON.stringify(category)
+    });
+};
+
+export const deleteCategory = async (id: string): Promise<void> => {
+    await fetch("/.netlify/functions/delete_category", {
+        method: "POST",
+        body: JSON.stringify({ id })
+    });
+};
+
+export const deleteAllCategories = async (): Promise<void> => {
+    await fetch("/.netlify/functions/delete_all_categories", {
+        method: "POST"
+    });
+};

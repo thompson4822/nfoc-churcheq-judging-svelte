@@ -127,14 +127,8 @@
                             <option value={category}>{category}</option>
                         {/each}
                     </select>
-<!--
-
-                    <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="category-field"
-                           type="text" bind:value={newContestant.category}>
--->
                 </div>
             </div>
-
             <div class="flex">
                 <div class="flex-1 text-center">
                     {#if newContestant._id}

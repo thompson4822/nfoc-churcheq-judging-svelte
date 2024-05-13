@@ -5,7 +5,7 @@
 	import {registrations, userId} from "$lib/stores";
 	import type {EntryScore} from "../models/EntryScore";
 
-	let mapOfMaps = new Map();
+	let mapOfMaps: Map<string, Map<string, number>> = new Map();
 
 	const createDescription = (entryScore: EntryScore) => {
 		let name = $registrations.filter(registration => registration.entryNumber === entryScore.entryNumber)[0].name;
@@ -48,13 +48,15 @@
 	});
 
 	// Sort all entries in a category in descending order based on overall score
-	const orderedMap = (categoryMap) => {
+	const orderedMap = (categoryMap: Map<string, number>) => {
 		return new Map([...categoryMap.entries()].sort((a, b) => b[1] - a[1]));
 	}
 
 	$: console.log(userId)
 
-
+	const categoryEntries = (category: string) => {
+		return mapOfMaps.get(category) || new Map();
+	}
 
 </script>
 
@@ -66,8 +68,8 @@
 			<div class="mb-3">
 					<h2 class="h2">{category}s</h2>
 					<ol class="list-decimal">
-						{#each [...orderedMap(mapOfMaps.get(category)).keys()] as description}
-							<li>{description}, score = {mapOfMaps.get(category).get(description)}</li>
+						{#each [...orderedMap(categoryEntries(category)).keys()] as description}
+							<li>{description}, score = {categoryEntries(category).get(description)}</li>
 						{/each}
 					</ol>
 			</div>
